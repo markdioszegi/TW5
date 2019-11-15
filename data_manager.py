@@ -1,4 +1,4 @@
-def import_data(filename="students.csv"):
+def import_data(filename):
     lines = []
 
     with open(filename, "r", encoding="UTF-8") as f:
@@ -7,7 +7,7 @@ def import_data(filename="students.csv"):
     
     return lines
 
-def export_data(students, filename="students.csv"):
+def export_data(students, filename):
     with open(filename, "w", encoding="UTF-8") as f:
         for student in students:
             f.write(",".join(student.get_vars()) + "\n")

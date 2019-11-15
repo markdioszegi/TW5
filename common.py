@@ -20,11 +20,10 @@ def generate_id(students):
             id_ += list(symbols)[random.randrange(0, len(symbols))]
 
         id_ = "".join(random.sample(id_, len(id_)))
-        
-        for student in students:    #check if an id already exists
+
+        for student in students:  # check if an id already exists
             if student.ID != id_:
                 accepted = True
-
 
     return id_
 
@@ -35,3 +34,11 @@ def check_id(table):
     for row in table:
         if inputs[0] == row.ID:
             return row
+
+
+def check_company_name(companies, name):
+    for company in companies:
+        if company.name == name:
+            return False
+    
+    return True

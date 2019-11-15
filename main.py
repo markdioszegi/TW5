@@ -1,5 +1,9 @@
 import ui
+
 from student import student
+from company import company
+from position import position
+from application import application
 
 
 def main():
@@ -10,17 +14,17 @@ def main():
 
         for choice in choices:
             if choice == "1":
-                student.student_module()
+                student.start_module()
             elif choice == "2":
-                pass
+                company.start_module()
             elif choice == "3":
-                pass
+                position.start_module()
             elif choice == "4":
-                pass
+                application.start_module()
             elif choice == "0":
                 exit()
             """ else:
-                raise KeyError("There is no such option.") """
+                raise KeyError("There is no such option!") """
 
 
 if __name__ == "__main__":
